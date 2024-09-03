@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section>
+        <h1> Count is: <span id="count"></span> </h1>
+    <div>
+        <button id="add"> Add </button>
+        <button id="subtract"> Subtract </button>
+        <button id="reset"> Reset </button>
+    </div>
+</section>
+    </main>
+
+
+    <script>
+
+        let count = 0;
+
+        const countEl = document.getElementById('count')
+        const addBtn = document.getElementById('add')
+        const subBtn = document.getElementById('subtract')
+        const resetBtn = document.getElementById('reset')
+
+
+        
+        
+        addBtn.addEventListener("click",()=>{
+            count = count + 1;
+            countEl.innerText = count;
+        })
+
+        subBtn.addEventListener("click",()=>{
+            count = count - 1;
+            countEl.innerText = count;
+        })
+
+        resetBtn.addEventListener("click",()=>{
+            count = 0;
+            countEl.innerText = count;
+        })
+        
+
+
+
+    </script>
+
+
+</body>
+</html>
